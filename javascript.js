@@ -4,14 +4,14 @@ let playerSelection;
 let computerscore= 0;
 let playerscore= 0;
 
-let buttons=document.querySelectorAll(".button");
-const body=document.querySelector("body");
-const main=document.querySelector("main");
-const endAlert=document.querySelector("#end-alert");
-const endDesc=document.querySelector("#end-desc");
-const returnMainBtn=document.querySelector("#retry-btn");
-const desc=document.querySelector("#desc3");
-const container=document.querySelector("#results-container");
+let buttons= document.querySelectorAll(".button");
+const body= document.querySelector("body");
+const main= document.querySelector("main");
+const endAlert= document.querySelector("#end-alert");
+const endDesc= document.querySelector("#end-desc");
+const returnMainBtn= document.querySelector("#retry-btn");
+const desc= document.querySelector("#desc3");
+const container= document.querySelector("#results-container");
 
 body.addEventListener("click",skipAnime());
 body.addEventListener("keydown",skipAnime());
@@ -23,15 +23,15 @@ function skipAnime(){
 }
 
 function beginningAnimation(){
-    fadein()
+    fadeIn();
      //need to turn nodelist of spans into an array so we can access last value for ontransitionend
-    const  desc1=document.querySelector("#Desc1");
+    const  desc1=document.querySelector("#desc1");
     let desc1Span=desc1.querySelectorAll("span");
 
 desc1Span=Array.from(desc1Span);
 
-const desc2=document.querySelector("#Desc2");
-const desc3=document.querySelector("#Desc3");
+const desc2=document.querySelector("#desc2");
+const desc3=document.querySelector("#desc3");
 
 desc1Span[desc1Span.length-1].ontransitioned=()=>{
     desc1.classList.add("fade-out");
@@ -85,8 +85,8 @@ desc2Span[desc2Span.length - 1].ontransitionend = () => {
      let splittext=strtext.split("");
      text.textcontent="";
        //append span tags to each character in the string
-  for (i = 0; i < splitText.length; i++) {
-    text.innerHTML += `<span>${splitText[i]}</span>`;
+  for (i = 0; i < splittext.length; i++) {
+    text.innerHTML += `<span>${splittext[i]}</span>`;
   }
 
   let char=0;
@@ -107,10 +107,9 @@ desc2Span[desc2Span.length - 1].ontransitionend = () => {
     timer = null;
   }
 }
-<img id="Img"src="img.jpg"onClick="myFunction()"/>
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
-    const img = button.querySelector("img");
+    const img = button.querySelector("img.jpg/png");
     playerSelection = img.alt.toLowerCase();
 
     playRound(playerSelection, computerSelection);
