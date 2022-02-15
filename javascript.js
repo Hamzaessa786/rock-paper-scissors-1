@@ -107,7 +107,7 @@ desc2Span[desc2Span.length - 1].ontransitionend = () => {
     timer = null;
   }
 }
-
+<img id="Img"src="img.jpg"onClick="myFunction()"/>
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     const img = button.querySelector("img");
